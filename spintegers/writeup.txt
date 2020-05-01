@@ -1,0 +1,77 @@
+\title{Signed Sparse Integer Representation of Large Numebrs for Great Justice}
+\author{
+        Daniel Roche\\
+        Assistant Professor\\
+        Department of Computer Science\\
+        United States Naval Academy\\
+            \and
+        Matthew Yates\\
+        Midshipmen\\
+        Department of Computer Science\\
+}
+\date{\today}
+
+\documentclass[12pt]{article}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This paper explains the implentation of a singed spares reprensation of large integers.
+Sparse numbers are those that may be represented with far fewer 1's than 0's.
+To represent them, only the indecies where they are present are stored. 
+In addition to storing indecies, out implementation also stores the sign of the set bits
+By having a negitive set bit at certian negitive indecies more numbers may be reprenseted
+effectly in a sparse format.
+In addition to dreceaseing storage size for any sufficently large integer that is suffiently sparse
+a sparse implementatoin is can be faster than other large number repesentation libraries.
+\end{abstract}
+
+\section{Introduction}
+Large Integers can challenges both in terms of comunications in low bandwith 
+situations and in terms speed with mobile and embedded computers.
+Large Integers are of special importance in terms of cryptographpy, with the simple concept
+of the larger the key the more powerfull the encryption. Sparese Integers may provide a way to have more powerfull
+encryption with less powerful computers.
+Inaddition to being able to express the value of large numbers with less data, a 
+signed sparse implenation will have faster mathmatical operations
+
+\paragraph{Outline}
+The remainder of this article is organized as follows.
+Section~\ref{previous work} gives account of previous work.
+Section~\ref{implentatoins} will explain the implenation of the various mathmatical operatoins.
+Results from testing is decribed in Section~\ref{results}.
+Finally, Section~\ref{conclusions} gives the conclusions.
+
+\section{Previous work}\label{previous work}
+I don't know.
+
+\section{Implementation}\label{implentatoins}
+\subsection{Creation}
+Goes through at each step seeing if the number is odd, if so then it sets a bit subtracts one
+and divides by two and increments the place where bits are set
+as Bits are set carries are solved iteritilvy
+\subsection{Addition}
+
+\subsection{Subtration}
+
+\subsection{Multiplaction}
+
+\subsection{Division}
+
+\subsection{Modulas}
+
+
+
+
+
+\section{Results}\label{results}
+In this section we describe the results.
+
+\section{Conclusions}\label{conclusions}
+We worked hard, and achieved very little.
+
+\bibliographystyle{abbrv}
+\bibliography{main}
+
+\end{document}

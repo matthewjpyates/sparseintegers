@@ -1,0 +1,31 @@
+n = 10101101010110101101
+modulo
+m = 1000000101
+
+Since the modulus m has a "1" followed by 6 "0"s, we can do a whole
+7-bit chunk at a time for the mod.
+
+The first 7 bits of n are "1010110"
+So we want to multiply m by 1010110, and then times a power of 2 to
+"line them up", then subtract. But this might become negative (which
+would be bad), so instead we'll multiply m by one less, 1010101.
+
+We can also use sparse multiplication to do the multiplication part:
+      1000000101 <--- m
+      *  1010101
+   -------------
+         1010101
+       1010101
+1010101
+----------------
+1010101110101001
+
+Now multiply that by 2^4 to "line them up", then subtract:
+
+  10101101010110101101 <-- n
+- 10101011101010010000
+----------------------
+         1101110011101 <-- new n
+
+Now we just repeat the process with the "new n", which is much smaller,
+and taking that modulo m will be faster.
